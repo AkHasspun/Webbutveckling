@@ -1,0 +1,101 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.wrapper #row1 {
+    background-color: rgb(14, 88, 14);
+    padding: 10px;
+}
+
+.wrapper #row2 {
+    display: flex;
+    background-color: rgb(14, 88, 14);
+    flex: 1 1 auto;
+}
+
+.wrapper #row2 #col1 {
+    border: grey solid 1px;
+    background-color: rgb(14, 88, 14);
+    flex: 0 0 200px;
+    padding: 10px;
+}
+
+.wrapper #row2 #col2 {
+    border: grey solid 1px;
+    background-color: rgb(56, 31, 197);
+    flex: 1 1 auto;
+    padding: 10px;
+}
+
+.wrapper #row2 #col3 {
+    border: grey solid 1px;
+    background-color: rgb(14, 88, 14);
+    flex: 0 0 240px;
+    padding: 10px;
+}
+
+
+
+.menuitem { 
+    width: 100%;
+    height: 30px;
+    background-color: rgb(228, 118, 28);;
+    border: grey dotted 1px;
+    color: rgb(228, 118, 28);
+    text-align: left;
+    margin: 5px;
+    user-select: none;    
+}
+
+.menuselect { 
+    width: 100%;
+    height: 30px;
+    vertical-align: middle;
+    background-color: rgb(228, 118, 28);
+    color: rgb(248, 248, 248);
+    text-align: left;
+    margin: 5px;
+    user-select: none; 
+       
+}
+
+.menuitem:hover {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(25, 179, 199);
+    border: grey solid 1px;
+    vertical-align: middle;
+    margin: 5px;
+    font-weight: bold;
+    transition: .1s ease-in;
+    transform: translateX(5%);
+}
+
+
+img {
+    float: left;
+    width: 400px;
+    height: 150px;
+    object-fit: cover;
+   
+    border-radius: 25px;
+}   
+
+.lad {
+
+    font-size: 3rem;
+}
+

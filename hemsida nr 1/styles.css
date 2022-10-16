@@ -1,0 +1,76 @@
+* {
+    color: white;
+}
+
+.bakgrund{
+    background-color: rgb(25, 82, 156);
+}
+
+.bakgrund2 {
+    background-image: url(/Portfolio/images/LifeAndDeath.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    text-align: center;
+    width: 100%;
+}
+
+.sektion_2  {
+    font-size: 25px
+}
+
+.rättsvar {
+    font-size: 69px;
+}
+
+
+.apa  {
+    width: 250; height: 250;
+}
+
+.länk {
+    font-size: 25px;
+    
+}
+
+.gissa_djuret {
+    font-size: 25px;
+}  
+
+
+
+
+
+.menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-color: rgb(5, 95, 71);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: auto;
+    margin-top: 0px;
+  }
+  
+  .menu a {
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px; 
+    }
+    
+   
+    .menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .menu .active {
+      background-color: #04AA6D;
+      color: white;
+    }

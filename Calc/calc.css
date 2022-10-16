@@ -1,0 +1,33 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+.main-calc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: aliceblue;
+    border: 2px solid #111;
+    width: 40%;
+
+}
+
+.grid-col-span-4 {
+    grid-column: 4;
+}
+
+.calc-screen {
+    height: 1rem;
+    border: 1px solid gray;
+    background: gainsboro;
+    color:#111;
+}
