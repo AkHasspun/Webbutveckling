@@ -84,7 +84,7 @@ CSS main
     background: var(--bg-clr-light);
     color: var(--fg-clr-normal);
     padding: .125rem;
-    overflow: hidden;
+    overflow: hidden;     
 }
 
 
