@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="history.css">
+    <!-- <script src="scripts/image.js" defer></script> -->
+
+    <title>HTMLs Historia & DOM</title>
+</head>
+<body class="container">
+    <header class="header">
+        <h1 class="header-caption">HTMLs Historia & Dokumentobjektmodellen</h1>
+        <nav class="primary-navigation">
+            <ul class="primary-navigation__links">
+                <li><a href="#" class="nav-link">Hem</a></li>
+                <li><a href="#" class="nav-link">Historia</a></li>
+                <li><a href="#dom" class="nav-link">Hur funkar det?</a></li>
+                <li><a href="#" class="nav-link">Om</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="main-content__history">
+            <header class="header-html">
+                <h2>HTMLs Historia</h2>
+            </header>            
+            <p class="text">
+                Under de första fem åren (1990-1995) gick HTML igenom ett antal revisioner och fick ett antal tillägg, främst värd först på CERN och sedan på IETF.
+            </p>
+            <button  id="picture" onClick="bigger();"><img class="inline-image | inline-image-medium" src="/images/html.versions.png" alt="all the html versions"></button>
+            <p class="text">
+                Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett första misslyckat försök att utöka HTML 1995, känd som HTML 3.0, gjorde sedan plats för en mer praktisk metod känd som HTML 3.2, som slutfördes 1997. HTML4 följde snabbt senare samma år.
+            </p>
+            <img class="inline-image | inline-image-medium"  src="/images/yahoo.png.jpg" alt="yahoo 1997">
+            <p class="text">
+                Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och istället börja arbeta på en XML-baserad motsvarighet, kallad XHTML. Detta försök började med en omformulering av HTML4 i XML, känd som XHTML 1.0, som inte lade till några nya funktioner förutom den nya serialiseringen, och som slutfördes 2000. Efter XHTML 1.0 vändes W3C:s fokus till att göra det lättare för andra arbetsgrupper att utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta arbetade W3C också på ett nytt språk som inte var kompatibelt med de tidigare HTML- och XHTML-språken, kallar det XHTML2.
+            </p>
+            <img class="inline-image | inline-image-medium"  src="/images/google.png.jpg" alt="google 2000">
+            <p class="text">
+                Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM Level 2 HTML (med start 2000 och som kulminerade 2003). Dessa ansträngningar försvann sedan, med några DOM nivå 3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan alla nivå 3-utkast var färdiga.
+            </p> 
+            <img class="inline-image | inline-image-small"  src="/images/html5.png" alt="html5 logo">           
+        </section>
+        <section id="dom" class="main-content__dom">
+            <header class="header-dom">
+                <h2>Hur fungerar webben och vad är DOM?</h2>
+            </header>
+            <p class="text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos doloribus molestias modi non iste, laborum repellendus, illum assumenda impedit inventore voluptatem aliquid. Similique neque animi quasi suscipit dicta vitae omnis quos corrupti consequuntur molestias sunt illo error expedita accusamus quia distinctio eveniet excepturi, tempore inventore. Corporis reprehenderit a, alias incidunt voluptatum necessitatibus provident. Esse velit a qui architecto. Labore reprehenderit odio tenetur cum! Doloribus ut nostrum magni illum, eaque suscipit praesentium in animi amet culpa, omnis nemo, facilis distinctio obcaecati dicta ab tempora aliquid consectetur ullam nam fuga deleniti est. Id alias rerum, magnam error itaque praesentium, quam earum, ipsa iste quisquam numquam eligendi illo doloribus ex. Quasi mollitia aliquid natus, magni officia deserunt! Consequuntur minima exercitationem perspiciatis dicta, minus earum quasi, quod nesciunt fugiat molestias, cum tempore enim quos. Tenetur voluptates quis temporibus non excepturi facilis quas 
+            </p>
+            <p class="text">
+                magnam, pariatur, laboriosam sint nostrum quidem mollitia in voluptatem rem illo? Vero reiciendis nostrum debitis nihil, ipsa ducimus explicabo molestias! Earum nostrum reiciendis delectus, officia quae quidem recusandae cumque tempore optio amet atque ipsam beatae animi saepe, quo et rem ratione, cupiditate qui! Temporibus nihil aperiam velit, vero libero ad, eligendi architecto ab esse accusantium dolore omnis corrupti, voluptas quaerat! Ea eveniet voluptatem sequi at sunt hic aspernatur rerum et. Quos ipsa suscipit, modi minima unde beatae illum cumque asperiores. Porro quam tempore asperiores deleniti molestias vel nisi iste rem odio numquam sit quos aperiam officia fugit vitae omnis iusto, harum impedit quae? Ex quasi minus blanditiis ea nam excepturi pariatur est quam quaerat modi quas, magni suscipit debitis ducimus quos, nulla provident maiores natus placeat. Maiores facere ducimus nihil dolore voluptatem temporibus id iste porro aliquid rem consequuntur tempore voluptas alias magni repudiandae, tenetur repellat perspiciatis? Nam eum eos ipsam eveniet doloribus, aliquid totam pariatur error ducimus saepe commodi eius numquam?
+            </p>
+            <img class="inline-image | inline-image-full" src="/images/DOM.png" alt="document object model schematic">
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-navigation">
+            <a class="nav-link" href="#">Tillbaka till toppen</a>
+            <a class="nav-link" href="/portfolio.html">Visa alla projekt</a>
+            <a class="nav-link" href="/about.html">Om mig</a>
+            <a class="nav-link" href="mailto:hampus.blinke@elev.ga.ntig.se">Kontakta mig</a>
+        </div>
+        <div>
+            <p class="footer-text">Copyright &copy; 2022 - Hampus Blinke / Danske Bank </p>
+        </div>
+    </footer>
+    <!-- <div id="show-image">
+    </div> -->
+</body>
+</html>
