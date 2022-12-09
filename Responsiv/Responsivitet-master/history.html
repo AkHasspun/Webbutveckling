@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="history.css">
-    <!-- <script src="scripts/image.js" defer></script> -->
+
+    <script src="history.js" defer></script>
 
     <title>HTMLs Historia & DOM</title>
 </head>
@@ -31,36 +32,52 @@
             <header class="header-html">
                 <h2>HTMLs Historia</h2>
             </header>            
-            <p class="text">
+            <p class="short-text">
                 Under de första fem åren (1990-1995) gick HTML igenom ett antal revisioner och fick ett antal tillägg, främst värd först på CERN och sedan på IETF.
             </p>
-            <button  id="picture" onClick="bigger();"><img class="inline-image | inline-image-medium" src="/images/html.versions.png" alt="all the html versions"></button>
-            <p class="text">
+            <div id="lightbox"></div>
+             <img src="/images/html.versions.png" class="zoomD" alt="all the html versions">
+            <p class="short-text">
                 Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett första misslyckat försök att utöka HTML 1995, känd som HTML 3.0, gjorde sedan plats för en mer praktisk metod känd som HTML 3.2, som slutfördes 1997. HTML4 följde snabbt senare samma år.
             </p>
-            <img class="inline-image | inline-image-medium"  src="/images/yahoo.png.jpg" alt="yahoo 1997">
-            <p class="text">
-                Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och istället börja arbeta på en XML-baserad motsvarighet, kallad XHTML. Detta försök började med en omformulering av HTML4 i XML, känd som XHTML 1.0, som inte lade till några nya funktioner förutom den nya serialiseringen, och som slutfördes 2000. Efter XHTML 1.0 vändes W3C:s fokus till att göra det lättare för andra arbetsgrupper att utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta arbetade W3C också på ett nytt språk som inte var kompatibelt med de tidigare HTML- och XHTML-språken, kallar det XHTML2.
+            <img class="inline-image | inline-image-medium | zoomD" src="/images/yahoo.png.jpg" alt="yahoo 1997">
+            <p class="text | text2">
+                Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och istället börja arbeta på en XML-baserad motsvarighet, kallad XHTML. Detta försök började med en omformulering av HTML4 i XML, känd som XHTML 1.0, som <span id="less">...</span><span id="more"> inte lade till några nya funktioner förutom den nya serialiseringen, och som slutfördes 2000. Efter XHTML 1.0 vändes W3C:s fokus till att göra det lättare för andra arbetsgrupper att utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta arbetade W3C också på ett nytt språk som inte var kompatibelt med de tidigare HTML- och XHTML-språken, kallar det XHTML2.</span>
             </p>
-            <img class="inline-image | inline-image-medium"  src="/images/google.png.jpg" alt="google 2000">
-            <p class="text">
-                Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM Level 2 HTML (med start 2000 och som kulminerade 2003). Dessa ansträngningar försvann sedan, med några DOM nivå 3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan alla nivå 3-utkast var färdiga.
+            <button onClick="myFunction()" id="read-more">Read more</button> <br>
+            <img class="inline-image | inline-image-medium | zoomD"  src="/images/google.png.jpg" alt="google 2000">
+            <p class="text | text3">
+                Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM Level 2 HTML <span id="less2">...</span> <span id="more2">(med start 2000 och som kulminerade 2003). Dessa ansträngningar försvann sedan, med några DOM nivå 3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan alla nivå 3-utkast var färdiga.</span>
             </p> 
-            <img class="inline-image | inline-image-small"  src="/images/html5.png" alt="html5 logo">           
+            <button onClick="myFunction2()" id="read-more2">Read more</button> <br> 
+            <img class="inline-image | inline-image-small | zoomD"  src="/images/html5.png" alt="html5 logo">           
         </section>
-        <section id="dom" class="main-content__dom">
+        <section class="main-content__dom">
             <header class="header-dom">
                 <h2>Hur fungerar webben och vad är DOM?</h2>
             </header>
-            <p class="text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos doloribus molestias modi non iste, laborum repellendus, illum assumenda impedit inventore voluptatem aliquid. Similique neque animi quasi suscipit dicta vitae omnis quos corrupti consequuntur molestias sunt illo error expedita accusamus quia distinctio eveniet excepturi, tempore inventore. Corporis reprehenderit a, alias incidunt voluptatum necessitatibus provident. Esse velit a qui architecto. Labore reprehenderit odio tenetur cum! Doloribus ut nostrum magni illum, eaque suscipit praesentium in animi amet culpa, omnis nemo, facilis distinctio obcaecati dicta ab tempora aliquid consectetur ullam nam fuga deleniti est. Id alias rerum, magnam error itaque praesentium, quam earum, ipsa iste quisquam numquam eligendi illo doloribus ex. Quasi mollitia aliquid natus, magni officia deserunt! Consequuntur minima exercitationem perspiciatis dicta, minus earum quasi, quod nesciunt fugiat molestias, cum tempore enim quos. Tenetur voluptates quis temporibus non excepturi facilis quas 
+            <p class="text | text4">
+                Särskilt det senare kravet krävde att omfattningen av HTML5-specifikationen inkluderar vad som tidigare hade specificerats i tre separata dokument: HTML4, XHTML1 och DOM2 HTML.<span id="less3">...</span><span id="more3"> Det innebar också att inkludera betydligt fler detaljer än vad som tidigare ansetts vara normen.
+                2006 indikerade W3C ett intresse av att trots allt delta i utvecklingen av HTML5, och 2007 bildade W3C en arbetsgrupp för att arbeta med WHATWG om utvecklingen av HTML5-specifikationen. Apple, Mozilla och Opera tillät W3C att publicera specifikationen under W3C-upphovsrätten, samtidigt som de behöll en version med den mindre restriktiva licensen på WHATWG-webbplatsen.</span>
             </p>
-            <p class="text">
-                magnam, pariatur, laboriosam sint nostrum quidem mollitia in voluptatem rem illo? Vero reiciendis nostrum debitis nihil, ipsa ducimus explicabo molestias! Earum nostrum reiciendis delectus, officia quae quidem recusandae cumque tempore optio amet atque ipsam beatae animi saepe, quo et rem ratione, cupiditate qui! Temporibus nihil aperiam velit, vero libero ad, eligendi architecto ab esse accusantium dolore omnis corrupti, voluptas quaerat! Ea eveniet voluptatem sequi at sunt hic aspernatur rerum et. Quos ipsa suscipit, modi minima unde beatae illum cumque asperiores. Porro quam tempore asperiores deleniti molestias vel nisi iste rem odio numquam sit quos aperiam officia fugit vitae omnis iusto, harum impedit quae? Ex quasi minus blanditiis ea nam excepturi pariatur est quam quaerat modi quas, magni suscipit debitis ducimus quos, nulla provident maiores natus placeat. Maiores facere ducimus nihil dolore voluptatem temporibus id iste porro aliquid rem consequuntur tempore voluptas alias magni repudiandae, tenetur repellat perspiciatis? Nam eum eos ipsam eveniet doloribus, aliquid totam pariatur error ducimus saepe commodi eius numquam?
+            <p class="text | text4">
+                Under ett antal år arbetade sedan båda grupperna tillsammans. 2011 kom dock grupperna till slutsatsen att de hade olika mål: W3C ville publicera en "färdig" version av "HTML5", medan WHATWG ville fortsätta arbeta med en <span id="less3">...</span><span id="more3"> Living Standard för HTML, med kontinuerligt underhåll av specifikationen istället för att frysa den i ett tillstånd med kända problem och lägga till nya funktioner efter behov för att utveckla plattformen.
+                Under 2019 undertecknade WHATWG och W3C ett avtal om att samarbeta om en enda version av HTML framöver: detta dokument.</span>
             </p>
-            <img class="inline-image | inline-image-full" src="/images/DOM.png" alt="document object model schematic">
+            <button onClick="myFunction3();" id="read-more3">Read more</button>     
+            <img class="inline-image | inline-image-full | zoomD" src="/images/DOM.png" alt="document object model schematic">
+            <p class="long-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur obcaecati tenetur expedita provident eaque! Exercitationem facere cumque doloremque mollitia, tenetur expedita, fugit maxime fuga modi voluptatum asperiores unde. Odio voluptas laudantium aliquam repudiandae! Maxime quos sint laudantium dolore, esse autem vel error debitis alias molestiae libero non perferendis, corporis reiciendis velit maiores excepturi nesciunt temporibus quaerat quisquam. Molestias, amet quae quia ipsa aliquam a id, corporis ea sunt soluta quo accusantium dolorum cum fugiat harum at perspiciatis? Corporis beatae necessitatibus laudantium, et, doloribus deserunt explicabo blanditiis nostrum porro quas tenetur! Maxime quis unde facilis repudiandae dicta, necessitatibus maiores, est, architecto accusamus tempore ratione iusto odio minima ducimus reprehenderit vel deserunt. Eos facere cupiditate doloribus debitis, ducimus veniam! Itaque eaque nobis consequatur doloremque dolorem quae qui vel nisi. Nisi sint architecto, tempora illum ex sed harum assumenda maiores impedit provident quisquam voluptate eos itaque officia! Quis aspernatur eaque dignissimos reiciendis. Tempora distinctio a sit minus porro nemo esse? Quas harum est aspernatur vitae assumenda quis, voluptates, tempore necessitatibus error corporis unde repellendus officiis id optio totam enim laboriosam eaque quasi culpa ad incidunt quisquam? Quis quia quos debitis optio, adipisci ad voluptatem dolorem numquam nemo earum doloremque maxime eaque dolore asperiores repudiandae molestias itaque maiores voluptas laudantium? Quos officiis, dolorem cumque molestiae qui assumenda enim ea explicabo amet tempore neque suscipit delectus placeat, saepe earum exercitationem provident. Nulla mollitia nostrum labore sunt debitis laborum, nobis, harum cupiditate enim neque non dolorem porro eius vel itaque alias sequi. Commodi laborum voluptates deserunt, illum magni reprehenderit quia dolorum doloremque eaque, corporis, id corrupti quibusdam tenetur autem? Cumque quod, numquam illo unde veritatis perferendis, soluta vitae nemo deleniti enim harum iste voluptatibus suscipit exercitationem! Minima harum, ea deserunt rerum fugiat accusantium voluptatum earum ipsum eaque voluptas necessitatibus iusto placeat molestias, nobis, dicta eos. Sint?
+            </p>
         </section>
-    </main>
+<section>
+    <div class="container2">
+        <div class="holder">s</div>
+        <div class="holder2">s</div>
+        <div class="holder3">s</div>
+    </div>
+</section>
+    </main> 
     <footer class="footer">
         <div class="footer-navigation">
             <a class="nav-link" href="#">Tillbaka till toppen</a>
