@@ -1,0 +1,365 @@
+/******************************
+ CSS history
+*******************************/
+
+/* global styling */
+
+
+:root {
+    --fg-clr-normal: #111;
+    --fg-clr-gray: #3a3a3a;
+    --fg-clr-link: rgb(7, 78, 118);
+    --fg-clr-accent: rgb(174, 38, 49);
+    --fg-clr-white: #fff;
+    
+    --bg-clr-header: green;
+    --bg-clr-nav: rgb(99, 223, 132);
+    --bg-clr-offwhite: whitesmoke;
+    --bg-clr-green: rgb(184, 222, 184);
+    --bg-clr-blue:lightblue;
+
+    --line-clr-black: #111;
+
+    --img-width-small: 150px;
+    --img-width-medium: 300px;
+    --img-width-large: 500px;
+
+    --padding-tight: .4rem;
+    --padding-normal: 5em;
+
+    --ft-weight-400: 400;
+    --ft-weight-700: 700;
+}
+
+*,
+*::before,
+*::after {                                            
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: var(--ft-weight-400);
+}
+
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+h2 {
+    padding: var(--padding-tight);
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+h3 {
+    padding: var(--padding-tight);
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    width: 100%;  
+    font-size: 23px;
+}
+
+body {
+    background: var(--fg-clr-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin: 0 auto;
+    width: 60%;
+    background: var(--bg-clr-header);
+    margin-top: 0;
+    height: 100px;
+    position: sticky;           /* Gör så att header hänger med när man skrollar */
+    top:0;
+}
+
+.header-html {
+    margin-bottom: 0;
+}
+
+.primary-navigation  {              /* Gör så att header hänger med när man skrollar */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-clr-nav);
+    height: 2.5rem;
+    margin-top: 18px;
+    position: sticky;
+    top:0;
+}
+
+.primary-navigation__links {            /*fixar vart länkarna ska sitta/ se ut*/
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+.main-content {             /*gör så det finns två kolumner i body*/
+    width: 60%;
+    margin-inline: auto;
+    background: var(--bg-clr-green);  
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+} 
+
+.html-text {
+    margin-top: 84px;
+    padding: var(--padding-tight);
+}
+
+.footer {                               /*fixar hur footer navigation ska se ut*/
+    background: var(--bg-clr-nav);      
+    width: 60%;
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+#more {                 
+    display: none;
+}
+
+#more2 {
+    display: none;          /*gör så att texten "more" inte ska synas*/
+}
+
+#more3 {
+    display: none;
+}
+
+.letter {                   /*sätter en bredd på brevet och en position*/
+    width: 100px;
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.animation {                              /*sätter ett namn på en animation samt hur länge den ska hålla på och hur lång animationen är*/
+    animation-name: letter;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes letter {                /*Själva animationen där den gör så att brevet börjar till vänster sedan åker den till höger och sen åker den tillbaks*/
+    0%   {left:-175px; top:0px;}
+    25%  {left:250px; top:0px;}
+    50%  {left:250px; top:0px;}
+    100% {left:-175px; top:0px;}
+  }
+
+.computer {                     /*Var datorn ska sitta*/
+    margin-bottom: 50px;
+    margin-inline: auto;
+}
+
+.server {                       /*var servern ska sitta*/
+    margin-bottom: 85px;
+    margin-inline: auto;
+}
+
+.computer-text {
+    margin-inline: auto;
+    font-size: 25px;
+}
+
+.server-text {
+    margin-inline: auto;
+    font-size: 25px;
+}
+
+.animation-info {               /*var animations-info ska sitta*/
+    font-size: 18px;
+    margin-top: 30px;
+    margin-inline: auto;
+    height: auto;
+}
+
+.text {
+    background-color: var(--fg-clr-gray);
+    width: 200px;
+    height: 60px;
+    color: white;
+    text-decoration: none;
+    margin-inline: auto;
+}
+
+button {                        /*lite styling på alla knappar*/
+    background: none;
+    margin-left: 20px;
+    height: auto;
+    width: auto;
+    border: none;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.lower-section  {           /*gör så att bakrgunden bakom rutan är samma färg och storlek som body*/
+    background-color: var(--bg-clr-green);
+    margin-inline: auto;
+    width: 60%;
+}
+
+.container2 {                              /*gör så att själva rutan blir vit samt sitter i mitten*/     
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white; 
+    border: 5px solid rgb(12, 1, 1);
+    width: 840px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.holder {                           
+    margin-top: 10%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: white;
+    width: 250px;
+    height: 400px;
+
+}
+
+.holder2 {
+margin-top: 10%;
+margin-bottom: 20px;
+display: grid;
+grid-template-columns: repeat(1, 1fr);                  /*3 holders vilket gör att det blir lättare att få allt att sitta där det ska*/
+background-color: white;
+width: 290px;
+height: 400px;
+}
+
+.holder3 {
+margin-top: 10%;
+margin-right: 20px;
+margin-bottom: 20px;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: white;
+width: 250px;
+height: 400px;
+}
+
+/* image styling */
+
+.inline-image {
+    object-fit: cover;
+}
+
+.inline-image-small {
+    width: var(--img-width-small);
+}
+
+.inline-image-medium {
+    width: var(--img-width-medium);
+}
+
+.inline-image-full {
+    width: var(--img-width-large);
+}
+
+
+.footer-navigation {            /*fixar så länkarna längst ner sitter i mitten*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* text styling */
+
+.header-caption {
+    font-weight: var(--ft-weight-700);
+    color: var(--fg-clr-white);
+    justify-content: center;
+    display: flex;
+}
+
+p {
+    padding: var(--padding-tight);
+    color: var(--fg-clr-gray);
+    margin: 15px;
+}
+
+img {
+    margin-left: 20px;
+    padding: var(--padding-tight);
+}
+
+
+/* link styling */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.nav-link {
+    color: var(--fg-clr-link);
+    display:flex;   
+    justify-content: center;
+    font-size: 22px;
+}
+
+.nav-link:visited {
+    color: var(--fg-clr-link)
+}
+
+.nav-link:hover {
+    color: var(--fg-clr-accent);
+    box-shadow: var(--bg-clr-header);
+}
+
+
+
+#background-zoom {
+    position: fixed; z-index: 999;      /*gör så att den täcker hela skärmen*/
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+
+    background: rgba(0, 0, 0, 0.5);     /*bakgrundsfärgen*/
+   
+    display: flex;
+    align-items: center;            /*gör så att bilden kommer haman mitten av skärmen*/
+
+    visibility: hidden;                /*börjar med att vara osynlig*/
+    opacity: 0;
+
+    transition: opacity ease 0.4s;       /*sätter en tid på hur lång animationen är*/
+  }
+   
+  #background-zoom.show {                        /*gör så att den syns när man klickat på bilden*/
+    visibility: visible;
+    opacity: 1;
+  }
+   
+  #background-zoom img {                   /*gör så att bilden täcker hela höjden och att marginalen på sidorna är lika stora samt så att bilden passar in*/
+    margin-inline: auto;
+    height: 100vh;
+    object-fit: cover;
+  }
+   
+ .zoom:hover {                /*gör så att när man hoverar en bild så får man en pointer mus*/
+    cursor: pointer;
+ }
