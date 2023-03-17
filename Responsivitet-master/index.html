@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="history.css">
+
+    <script src="history.js" defer></script>
+
+    <title>HTMLs Historia & DOM</title>
+</head>
+<body class="container">
+    <header class="header">
+        <h1 class="header-caption">HTMLs Historia & Dokumentobjektmodellen</h1>
+        <nav class="primary-navigation">
+            <ul class="primary-navigation__links">
+                <li><a href="#" class="nav-link">Hem</a></li>
+                <li><a href="#section-dom" class="nav-link">Hur funkar det?</a></li>
+                <li><a href="#laws" class="nav-link">Lagar</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                <li><a href="#DOM-animation" class="section-dom | nav-link">DOM animation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="main-content__history">
+            <header class="header-html">
+                <h2>HTMLs Historia</h2>
+            </header>            
+            <p class="short-text">
+                Under de första fem åren (1990-1995) gick HTML igenom ett antal revisioner och fick ett antal tillägg, främst värd först på CERN och sedan på IETF.
+            </p>
+            <div id="background-zoom"></div>
+             <img src="/Responsiv/images/html.versions.png" class="inline-image-medium | zoom | center-image" alt="all the html versions">
+            <p class="short-text">
+                Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett första misslyckat försök att utöka HTML 1995, känd som HTML 3.0, gjorde sedan plats för en mer praktisk metod känd som HTML 3.2, som slutfördes 1997. HTML4 följde snabbt senare samma år.
+            </p>
+            <img class="inline-image | inline-image-medium | zoom | center-image" src="/Responsiv/images/yahoo.png.jpg" alt="yahoo 1997">
+            <p>
+                Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och istället börja arbeta på en XML-baserad motsvarighet, kallad XHTML. Detta försök började med en omformulering av HTML4 i XML, känd som XHTML 1.0, som <span id="less">...</span><span id="more"> inte lade till några nya funktioner förutom den nya serialiseringen, och som slutfördes 2000. Efter XHTML 1.0 vändes W3C:s fokus till att göra det lättare för andra arbetsgrupper att utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta arbetade W3C också på ett nytt språk som inte var kompatibelt med de tidigare HTML- och XHTML-språken, kallar det XHTML2.</span>
+            </p>
+            <button onClick="myFunction('more','less','read-more')" class="read-more" id="read-more">Read more</button> <br>
+            <img class="inline-image | inline-image-medium | zoom | center-image"  src="/Responsiv/images/google.png.jpg" alt="google 2000">
+            <p>                
+                Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM Level 2 HTML <span id="less2">...</span> <span id="more2">(med start 2000 och som kulminerade 2003). Dessa ansträngningar försvann sedan, med några DOM nivå 3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan alla nivå 3-utkast var färdiga.
+                2003 väckte publiceringen av XForms, en teknik som var positionerad som nästa generation av webbformulär, ett förnyat intresse för att utveckla HTML i sig, snarare än att hitta ersättare för det. Detta intresse kom från insikten att XML:s distribution som webbteknik var begränsad till helt nya teknologier (som RSS och senare Atom), snarare än som en ersättning för befintliga distribuerade tekniker (som HTML). <br><br>
+                Ett “proof of concept” för att visa att det var möjligt att utöka HTML4s formulär för att tillhandahålla många av de funktioner som XForms 1.0 introducerade, utan att webbläsare skulle behöva implementera renderingsmotorer som var inkompatibla med befintliga HTML-webbsidor, var det första resultatet av detta förnyade intresse. I detta tidiga skede, medan utkastet redan var allmänt tillgängligt och input redan begärdes från alla källor, var specifikationen endast under Opera Softwares upphovsrätt. 
+                </span>
+            </p> 
+            <button onClick="myFunction('more2','less2','read-more2')" class="read-more" id="read-more2">Read more</button> <br> 
+            <img class="inline-image | inline-image-small | zoom | center-image"  src="/Responsiv/images/html5.png" alt="html5 logo">           
+        </section>
+        <section class="main-content__dom">
+            <p class="html-text">
+                Idén att HTMLs utveckling skulle återupptas testades vid en W3C-workshop 2004, där några av principerna som ligger till grund för HTML5-arbetet (beskrivs nedan), såväl som det tidigare nämnda tidiga förslaget <span id="less3">...</span><span id="more3"> täcker bara formulärrelaterade funktioner, presenterades för W3C gemensamt av Mozilla och Opera. Förslaget avslogs med motiveringen att förslaget stred mot den tidigare valda riktningen för webbens utveckling; W3C:s personal och medlemmar röstade för att fortsätta utveckla XML-baserade ersättningar istället. <br> <br>
+                Kort därefter tillkännagav Apple, Mozilla och Opera tillsammans sin avsikt att fortsätta arbeta med insatsen under paraplyet av en ny plats kallad WHATWG. En offentlig e-postlista skapades och utkastet flyttades till WHATWG-webbplatsen. Upphovsrätten ändrades därefter för att ägas gemensamt av alla tre leverantörerna och för att tillåta återanvändning av specifikationen. <br> <br>
+                WHATWG baserades på flera kärnprinciper, särskilt att tekniker måste vara bakåtkompatibla, att specifikationer och implementeringar måste matcha även om detta innebär att man ändrar specifikationen snarare än implementeringarna, och att specifikationer måste vara tillräckligt detaljerade för att implementeringar kan uppnås. fullständig driftskompatibilitet utan att omvända varandra. <br> <br>
+                Särskilt det senare kravet krävde att omfattningen av HTML5-specifikationen inkluderar vad som tidigare hade specificerats i tre separata dokument: HTML4, XHTML1 och DOM2 HTML. Det innebar också att inkludera betydligt fler detaljer än vad som tidigare ansetts vara normen.
+                2006 indikerade W3C ett intresse av att trots allt delta i utvecklingen av HTML5, och 2007 bildade W3C en arbetsgrupp för att arbeta med WHATWG om utvecklingen av HTML5-specifikationen. Apple, Mozilla och Opera tillät W3C att publicera specifikationen under W3C-upphovsrätten, samtidigt som de behöll en version med den mindre restriktiva licensen på WHATWG-webbplatsen. <br> <br>
+                Under ett antal år arbetade sedan båda grupperna tillsammans. 2011 kom dock grupperna till slutsatsen att de hade olika mål: W3C ville publicera en "färdig" version av "HTML5", medan WHATWG ville fortsätta arbeta med en Living Standard för HTML, med kontinuerligt underhåll av specifikationen istället för att frysa den i ett tillstånd med kända problem och lägga till nya funktioner efter behov för att utveckla plattformen. <br><br>
+                Under 2019 undertecknade WHATWG och W3C ett avtal om att samarbeta om en enda version av HTML framöver: detta dokument.
+                </span>
+            </p>
+            <button onClick="myFunction('more3','less3','read-more3');" class="read-more" id="read-more3">Read more</button> 
+            <div> <img class="inline-image | inline-image-full | center-image | zoom" src="/Responsiv/images/DOM.png" alt="document object model schematic"> </div>
+            <header class="header-dom">
+                <h2 id="section-dom">Hur fungerar DOM?</h2> 
+            </header>
+            <p class="long-text">
+                Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM Level 2 HTML (med start 2000 och som kulminerade 2003). Dessa ansträngningar försvann sedan, med några DOM nivå 3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan alla nivå 3-utkast var färdiga.
+            </p>
+            <p>
+                DOM står för Document Object Model och HTML DOM är en standardiserad modell där en webbsidas alla element representeras som objekt. Det tillåts att manipulera objekten (elementen) och nå dess egenskaper med hjälp av metoder och “events”. Webbläsaren skapar en modell när en sida laddas som kan representeras som ett träd av html-element. Roten av trädet, det element som ligger i grunden (eller toppen) är html. Trädet följer sedan strukturen vi definierat i html-sidan.
+            </p>
+        </section>
+    </main>
+    <section id="DOM-animation" class="lower-section">
+        <h3 class="dom">Här är en liten animation på hur DOM fungerar</h3>
+        <div class="container2">
+            <div class="holder">
+                <p class="computer-text">DATOR</p>
+                <img class="inline-image-animation | computer" src="/Responsiv/images/computer.png" alt="computer">
+            </div>
+            <div class="holder2"> 
+                <img id="letter" class="letter" src="/Responsiv/images/brev.webp" alt="letter">
+                <button onClick="animation()" class="text">Klicka här för att starta animationen!</button>
+            </div>
+            <div class="holder3"> 
+                <p class="server-text">SERVER</p>
+                <img class="inline-image-animation | server " src="/Responsiv/images/server.png" alt="Server">
+            </div>
+        </div>
+    </section>
+    <section class="bottom-section">
+        <h3 id="laws">Lagar Och Bestämmelser</h3>
+        <section class="laws-section">
+            <div><h4>GDPR</h4>
+            <p class="laws-text"> General Data Protection Regulation (GDPR) är en EU-lag som trädde i kraft 2018. Den har som syfte att skydda personuppgifter för individer inom EU. GDPR gäller för alla företag och organisationer som samlar in, använder eller lagrar personuppgifter från EU-medborgare, oavsett var företaget eller organisationen är beläget. </p></div>
+            <img class="inline-image | inline-image-big | gdpr-picture | zoom | center-image" src="/Responsiv/images/gdpr.jpg" alt="GDPR Picture">
+            <div><h4>WCAG</h4>
+            <p class="laws-text">WCAG (Web Content Accessibility Guidelines) är riktlinjer som utvecklats av World Wide Web Consortium (W3C) för att göra webbinnehåll tillgängligt för människor med funktionsnedsättningar. Målet med WCAG är att göra det möjligt för alla användare, inklusive de med synskador, hörselskador, rörelsehinder och läs- och skrivsvårigheter, att använda webbinnehåll på ett likvärdigt sätt. WCAG består av tre nivåer av krav: A, AA och AAA. Nivå A är den lägsta nivån och innebär att webbinnehållet ska vara minimalt tillgängligt. Nivå AA är den mellannivån och innebär att webbinnehållet ska vara tillgängligt för de flesta användare med funktionsnedsättningar. Nivå AAA är den högsta nivån och innebär att webbinnehållet ska vara maximalt tillgängligt för alla användare med funktionsnedsättningar.</p></div>
+            <img class="inline-image | inline-image-big | wcag-picture | zoom | center-image" src="/Responsiv/images/wcag.png" alt="WCAG Picture">
+        </section>
+    </section>
+    <section class="form-section">
+        <h5 id="kontakt">Kontakta mig!</h5>
+        <form action="https://formsubmit.co/hampus.blinke@elev.ga.ntig.se" method="POST">
+            <fieldset class="message-box">
+                <h6>Skicka meddelande</h6>
+                <label for="email">E-post:</label>  
+                <input class="form-text" type="email" name="email" id="email" required>
+            
+                <label for="email">Namn:</label>  
+                <input class="form-text" type="text" name="name" id="text">
+            
+                <label for="message">Meddelande:</label>
+                <textarea class="form-text" name="message" id="message" cols="30" rows="10"></textarea>
+                <button  type="submit" id="send" class="btn-send" >Skicka</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-navigation">
+            <a class="nav-link" href="#">Tillbaka till toppen</a>
+            <a class="nav-link">Visa alla projekt</a>
+            <a class="nav-link">Om mig</a>
+            <a class="nav-link" href="mailto:hampus.blinke@elev.ga.ntig.se">Kontakta mig</a>
+        </div>
+        <div>
+            <p class="footer-text">Copyright &copy; 2022 - Hampus Blinke / Danske Bank </p>
+        </div>
+    </footer>
+</body>
+</html>
