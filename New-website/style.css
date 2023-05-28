@@ -1,0 +1,419 @@
+:root {
+    --fg-clr-normal: #111;                                  /* standard for text */    
+   
+    --bg-clr-light: rgb(162, 231, 240);                                  
+    --bg-clr-gray: rgb(162, 231, 240);
+    --bg-clr-iceblue: rgb(44, 48, 52);
+   
+    --line-clr-blue: lightblue;
+    --line-clr-darkgray: rgb(50, 93, 107);
+    --gradient: linear-gradient(rgb(14, 186, 40), rgb(29, 137, 176));  
+}
+
+
+
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: var(--ft-weight-400);
+
+    margin: 0;
+    padding: 0;
+
+    scroll-padding: 6rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(220, 255, 220); 
+}
+
+h1 {
+    display: grid;
+    place-items: center;
+    font-size: 100px;
+}
+
+
+.hero-banner {
+    background-image: url("/New-website/image/forest.webp");    /*gör så att bilden täcker hela skärmen utan att repeteras */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 48rem;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+}
+
+.main-links {           /* stylar main-links*/
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 30px;
+    margin-inline: auto;
+    transition: 1s;
+    padding: 1rem;
+}
+
+.burger-menu {      /* gör så att burger menyn inte syns*/
+    display: none;
+}
+
+.sidenav {      /* stylar sidenaven*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {      /* stylar länkarna och gör så att sidenaven och länkarna inte syns*/
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {      /* positionerar sidenav och stänga knappen*/
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {   /* gör så att paddingen och fon sizen ändras vid en viss height*/
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+ .open {                /* stylar öppna knappen*/
+    font-size:40px;
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+ }
+
+ .open:hover { 
+    color: grey;
+ }
+
+.header:hover .main-links:not(.main-links:hover){
+    opacity: 0.5;
+    transition: 1s;         /*gör så när headern är hoverad så får alla förutom den som hoveras lägre opacity */
+}
+
+.main-links:hover {
+    color: green;
+}
+
+.header {
+    --background: transparent;      /* stylar headern*/
+
+    display: flex;
+    background: var(--background);
+    top: 100px;
+    min-width: 60%;
+    place-items: center;
+    position: fixed;
+    transition: 1s;
+}
+
+.nav-scrolled {
+    --background: grey; /*gör så att när klassen nav-scrolled är aktiv så ändras backgorund till grå och att den ändrar position */
+
+    top: 0;
+    z-index: 100;
+ }
+
+.main-section { /*sätter max width och height på main-section */
+    max-height: 200vh;
+    max-width: 90%;
+    margin-inline: auto;    
+}
+
+.about-section {
+    display: grid;
+    place-items: center;
+    min-width: 100%;
+}
+
+h2, h3, h4 {
+    display: grid;      /*ändrar lite med rubrikerna */
+    color: firebrick;
+    font-size: 50px;
+    margin-top: 50px;  
+    place-items: center;
+}                               
+
+
+.about-text {
+    width: 70%;
+}
+
+textarea {
+
+    resize: none;
+    height: 50px;
+    padding-inline: 5px;        /*gör så attt när det blir för mycket text kan man scrollar*/
+    overflow-y: scroll;
+}
+
+form {
+    margin-bottom: 100px;
+}
+
+.form-text {
+    border: solid rgba(0, 0, 0, 0.603) 2px;
+}
+
+.message-box {     /*fixar storlek och position på medelande rutorna*/
+    width: 50%;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2%;
+    border: none;
+    padding-inline: 20px;
+}
+
+.btn-send {     /*stylar skicka knappen*/
+    width: 40%;
+    margin-inline: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-send:hover {
+    background-color: var(--bg-clr-grey);
+}
+
+/* form styling */
+
+input, button, textarea { /*sätter en storlek på texten som man skriver in*/
+    font-size: 1rem;
+}
+
+.footer {                               /*fixar hur footer navigation ska se ut*/
+    background: grey;      
+    width: 100%;
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-navigation {    /*fixar hur footer-navigation ska se ut*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-text {
+    font-size: 20px;
+}
+
+
+.slideshow-container {      /*sätter en storlek på själva containern*/
+    max-width: 1000px;
+    max-height: 500px;
+    position: relative;
+    margin: auto;
+  }
+  
+
+  .mySlides {           /*gör så att bildenra hamnar i mitten*/
+    display: grid;
+    place-items: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {        /*stylar knapparna för att byta bild*/
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+
+  .next {   /*gör så att nästa knappen är till höger*/
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+ 
+  .prev:hover, .next:hover { /*hover på nästa och tillbaka knapparna*/
+    background-color: whitesmoke;
+  }
+  
+
+  .text {           /*stylar texten under bilden*/
+    color: black;
+    font-size: 20px;
+    padding: 8px 12px;
+    margin-inline: auto;
+    bottom: 8px;
+    width: 10%;
+    text-align: center;
+  }
+
+  .text:hover {     /*lägger till en hover*/
+    background: skyblue;
+    cursor: pointer;
+  }
+  
+
+  .numbertext {     /*sätter position och styling på nummret på bilden*/
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+
+  .dot {        /*stylar knapparna under bilden */
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {     /*sätter en annan färg på den pricken kopplad till bilden man är på*/
+    background-color: #717171;
+  }
+  
+
+  .fade {               
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }                             /*skapar en animation för att fada när man byter bild*/
+  
+  @keyframes fade { 
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  .image {      /*sätter en height och widht på bilderna*/
+    height: 300px;
+    width: 100%;
+  }
+
+  .skip-link {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white; 
+    background-color: green;
+    translate: -100% 0;
+    transition: translate 200ms ease-in-out;
+    padding: 0.75rem;
+    height: 40px;
+    font-size: 25px;        /*gör en skip-link med en animation från vänster till mitten*/
+}
+
+.skip-link:focus {
+    translate: 0;
+}
+
+.skip-link:hover {
+    background-color:rebeccapurple;
+}
+
+
+
+@media (min-width: 1185px) {
+    .footer {                               /*fixar hur footer navigation ska se ut*/
+        background: grey;      
+        width: 100%;
+        display: flex;
+        margin-inline: auto;
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+    }
+
+    .footer-navigation {  /*gör så att footer länkarna är på rad*/
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 769px ) and (max-width: 1184px) {
+    .footer {                               /*fixar hur footer navigation ska se ut*/
+        background:grey;      
+        width: 100%;
+        display: flex;
+        margin-inline: auto;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 70px;    /*gör h1 mindre*/
+    }
+
+    .burger-menu {      /*gör så att burger menyn syns*/
+        display: block;
+    }
+
+    .header {       /*gör så att headern inte syns*/
+        display: none;
+    }
+
+    .main-links {
+        font-size: 20px;
+    }
+
+    .footer {                               /*fixar hur footer navigation ska se ut*/
+        background: grey;      
+        width: 100%;
+        display: flex;
+        margin-inline: auto;
+        flex-direction: column;
+        align-items: center;
+        bottom: 0;
+        margin-top: 100px;
+    }
+
+    .footer-navigation {        /*gör så att länkarna i footer är i kolumner*/
+        display: flex;
+        flex-direction:column;  
+    }
+}

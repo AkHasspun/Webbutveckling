@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link"href="#">Go to main conent</a>
+    <section class="hero-banner" id="hero-banner">
+        <div class="burger-menu">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Home🏠</a>
+                <a href="#about">About👨‍🦰</a>
+                <a href="#projects">Projects💼</a>
+                <a class="main-links" href="#feedback">Feedback 🗨</a>
+                <a href="mailto:hampus.blinke@elev.ga.ntig.se">Contact📞</a>
+            </div>
+            <span class="open" onclick="openNav()">&#9776; open</span>
+        </div>
+        <header class="header" id="header">
+            <a class="main-links" href="#">Home 🏠</a>
+            <a class="main-links" href="#h2">About 🤙</a>
+            <a class="main-links" href="#products">Products 🪓</a>
+            <a class="main-links" href="#feedback">Feedback 🗨</a>
+            <a class="main-links" href="#">Contact 📞</a>
+        </header>
+        <h1>Hello guys</h1>
+    </section>
+    <main class="main-section">
+        <h2 id="h2">About</h2>
+        <section class="about-section">
+            <div class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore facilis deserunt quaerat similique consequatur sequi illo qui reiciendis non suscipit, esse ratione delectus eum velit magni alias maiores aliquam accusamus iusto temporibus provident soluta recusandae sunt dolores? Consectetur maxime omnis ducimus voluptas blanditiis? Necessitatibus, ea. Velit amet non quae! Non, iure doloribus. Quasi fugit et tenetur ad porro? Eaque minima fuga soluta pariatur ea molestias nostrum fugiat atque placeat autem, ipsam nihil voluptatum velit temporibus aliquam accusamus dicta id ducimus facilis consequuntur nulla quae? Unde maiores inventore facere quasi sapiente optio, aspernatur quis repudiandae voluptate dolorem fugiat, alias iure ea!
+            </div>
+        </section>
+        <h3 id="products">Products</h3>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img class="image" src="/New-website/image/hammare.png">
+                <div class="text">Buy now!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img class="image" src="/New-website/image/såg.png">
+                <div class="text">Buy now!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="image" src="/New-website/image/yxa.png">
+                <div class="text">Buy now!</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <section class="form-section">
+            <h4 id="feedback">Feedback</h4>
+            <form action="https://formsubmit.co/hampus.blinke@elev.ga.ntig.se" method="POST">
+                <fieldset class="message-box">
+                    <label for="email">E-post:</label>
+                    <input class="form-text" type="email" name="email" id="email" required>
+
+                    <label for="email">Namn:</label>
+                    <input class="form-text" type="text" name="name" id="text">
+
+                    <label for="message">Meddelande:</label>
+                    <textarea class="form-text" name="message" id="message" cols="30" rows="10"></textarea>
+                    <button type="submit" id="send" class="btn-send">Skicka</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-navigation">
+            <a class="main-links" href="#">🏠 Home </a>
+            <a class="main-links" href="#h2">🤙 About</a>
+            <a class="main-links" href="#products">🪓 Products </a>
+            <a class="main-links" href="#feedback">🗨 Feedback </a>
+            <a class="main-links" href="mailto:hampus.blinke@elev.ga.ntig.se">📞 Contact</a>
+        </div>
+        <div>
+            <p class="footer-text">Copyright &copy; 2022 - Hampus Blinke / Danske Bank </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
